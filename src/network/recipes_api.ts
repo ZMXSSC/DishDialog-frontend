@@ -14,6 +14,7 @@ async function fetchData(input: RequestInfo, init?: RequestInit) {
         const errorMessage = errorBody.error;
 
         if (response.status === 401) {
+            console.log('Reach 401 here:');  // Add this line temporarily
             throw new UnauthorizedError(errorMessage);
         } else if (response.status === 409) {
             throw new ConflictError(errorMessage);
