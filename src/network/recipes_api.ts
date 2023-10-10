@@ -4,7 +4,8 @@ import {Comment} from "../models/comment";
 import {ConflictError, UnauthorizedError} from "../errors/http_errors";
 
 async function fetchData(input: RequestInfo, init?: RequestInit) {
-    const response = await fetch(input, init);
+    const baseUrl = process.env.REACT_APP_BACKEND_URL || '';  // use an empty string as fallback for local development
+    const response = await fetch(baseUrl + input, init);
     if (response.ok) {//between 200 and 300
         return response;
     } else { //We need to handle error from the response(backend)
