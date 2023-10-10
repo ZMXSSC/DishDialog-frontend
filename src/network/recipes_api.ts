@@ -6,6 +6,7 @@ import {ConflictError, UnauthorizedError} from "../errors/http_errors";
 async function fetchData(input: RequestInfo, init?: RequestInit) {
     const baseUrl = process.env.REACT_APP_BACKEND_URL || '';  // use an empty string as fallback for local development
     const response = await fetch(baseUrl + input, init);
+    console.log('Base URL:', baseUrl);  // Add this line temporarily
     if (response.ok) {//between 200 and 300
         return response;
     } else { //We need to handle error from the response(backend)
