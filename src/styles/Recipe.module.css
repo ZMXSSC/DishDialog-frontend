@@ -1,0 +1,80 @@
+.recipeCard {
+    background-color: #d5eef1;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardBody {
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
+.cardText {
+    white-space: pre-line;
+}
+
+.titleBorder {
+    border-bottom: 1.2px solid #0f67dc; /* Adjust the color as needed */
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the border horizontally */
+    padding-bottom: 10px; /* Adjust the spacing as needed */
+}
+
+.title {
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.imageStyle {
+    height: 82%;
+    width: 100%;
+    max-height: calc(100% - 40px); /* Adjust the value to leave space for other elements within the card */
+    object-fit: cover;
+    aspect-ratio: 4/3; /* Enforce a 4:3 aspect ratio */
+}
+
+
+.cardBody {
+    height: 18%;
+}
+
+.timestamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal90w {
+    max-width: 90% !important;
+}
+
+.modal60w {
+    max-width: 60% !important;
+}
+
+.textBody {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.commentSectionRow {
+    height: 600px; /* Set the desired height for the scrollable section */
+    max-width: 500px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+.commentSectionContainer {
+    padding-right: 15px; /* Add right padding to avoid scrollbar overlap */
+}
