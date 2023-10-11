@@ -41,7 +41,8 @@ const PublicRecipe = ({loggedInUser, recipe, className}: PublicRecipeProps) => {
         createdUpdatedText = "Created: " + formatDate(createdAt);
     }
 
-    const imageUrl = `/api/recipes/${_id}/image/`;  // The URL to the image
+    const backendUrl = 'https://api.dishdialog.online';
+    const imageUrl = `${backendUrl}/api/recipes/${_id}/image/`;// The URL to the image
 
     return (
         // This is a prop passed into the Recipe component, allowing whoever uses the Recipe component to optionally
