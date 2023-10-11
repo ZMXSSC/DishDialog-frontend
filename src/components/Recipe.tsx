@@ -46,7 +46,8 @@ const Recipe = ({loggedInUser, recipe, onRecipeClicked, onDeleteRecipeClicked, c
         createdUpdatedText = "Created: " + formatDate(createdAt);
     }
 
-    const imageUrl = `/api/recipes/${_id}/image`;  // The URL to the image
+    const backendUrl = 'https://api.dishdialog.online';
+    const imageUrl = `${backendUrl}/api/recipes/${_id}/image/`;// The URL to the image
 
     const handleError = () => {
         console.log('Image failed to load');

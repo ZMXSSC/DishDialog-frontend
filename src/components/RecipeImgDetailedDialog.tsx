@@ -56,6 +56,8 @@ const RecipeImgDetailDialog: React.FC<RecipeDetailDialogProps> = ({
         setCommentSubmitted(false);
     }, [commentSubmitted]);
 
+    const backendUrl = 'https://api.dishdialog.online';
+    const imageUrl = `${backendUrl}/api/recipes/${recipe._id}/image/`;// The URL to the image
 
     return (
         <div>
@@ -67,7 +69,7 @@ const RecipeImgDetailDialog: React.FC<RecipeDetailDialogProps> = ({
                     <Container fluid>
                         <Row>
                             <Col md={5}>
-                                <Image src={`/api/recipes/${recipe._id}/image/`} rounded className={styles.imageStyle}/>
+                                <Image src={imageUrl} rounded className={styles.imageStyle}/>
                                 <div style={{padding: '25px'}}>{recipe.imageDesc}</div>
                             </Col>
                             <Col className={styles.textBody} md={4}>
